@@ -1,17 +1,13 @@
 package com.sun.librarymanagement.domain.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Getter
-@Builder
-public class UserResponseDto {
+@AllArgsConstructor
+public class SuccessResponseDto {
 
-    private String token;
-
-    private String username;
-
-    private String email;
+    private String message;
 }

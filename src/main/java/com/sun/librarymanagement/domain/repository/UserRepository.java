@@ -16,6 +16,8 @@ public interface UserRepository extends JpaRepository<UserEntity, Long> {
 
     Optional<UserEntity> findByUsername(String username);
 
+    Optional<UserEntity> findByVerifyToken(String token);
+
     @Query("SELECT u FROM UserEntity u WHERE u.username = :username OR u.email = :email")
     List<UserEntity> findByUsernameOrEmail(
         @Param("username") String username,

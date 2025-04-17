@@ -30,7 +30,7 @@ public class WebSecurityConfiguration {
         return http.csrf(AbstractHttpConfigurer::disable)
             .formLogin(AbstractHttpConfigurer::disable)
             .authorizeHttpRequests(auth ->
-                auth.requestMatchers("/api/users/**")
+                auth.requestMatchers("/api/v1/users/**")
                     .permitAll()
                     .anyRequest()
                     .authenticated()
